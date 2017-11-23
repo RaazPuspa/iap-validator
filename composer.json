@@ -1,5 +1,5 @@
 {
-    "name": "pusparaaz/iap-validator",
+    "name": "raazpuspa/iap-validator",
     "description": "Composer package to validate in-app purchase receipts made to iTunes or Google through mobile apps.",
     "type": "package",
     "license": "MIT",
@@ -7,8 +7,7 @@
         {
             "name": "Pusparaj Bhattarai",
             "email": "mail@pusparaaz.com.np",
-            "homepage": "https://pusparaaz.com.np",
-            "role": "Developer"
+            "homepage": "https://pusparaaz.com.np"
         }
     ],
     "support": {
@@ -17,7 +16,8 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": ">=5.6 || ^7.0"
+        "php": ">=5.6 || ^7.0",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
         "phpunit/phpunit": "~5.0",
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PuspaRaaz\\IAPValidator\\": "src"
+            "RaazPuspa\\IAPValidator\\": "src"
         }
     },
     "autoload-dev": {
