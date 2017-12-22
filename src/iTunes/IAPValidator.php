@@ -201,16 +201,6 @@ class IAPValidator implements IAPValidatorContract
         $this->_receipt =
             new Receipt(json_decode($httpResponse->getBody(), true));
 
-        $trySandbox = $this->_receipt->getStatusCode() ===
-            Receipt::SANDBOX_RECEIPT_SENT_TO_PRODUCTION;
-
-        if ($this->getEndPoint() === self::PRODUCTION_ENDPOINT
-            && $trySandbox) {
-            return $this->validateReceipt(
-                $receiptData, self::SANDBOX_ENDPOINT
-            );
-        }
-
         $tryProduction = $this->_receipt->getStatusCode() ===
             Receipt::PRODUCTION_RECEIPT_SENT_TO_SANDBOX;
 
