@@ -117,10 +117,10 @@ $statusCode = $response->getStatusCode();
 ```php
 # if validation is successful, you can get receipt information with following
 # method calls
-# get current app environment upon which validation is performed
+# get the status of validation
 $statusCode = $response->getStatusCode();
 
-# get current iTunes server environment
+# get current app environment upon which validation is performed
 $environment = $response->getEnvironment();
 
 # get just the receipt object
